@@ -50,10 +50,162 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid red;
 }
+
+@body-color: #040F0F;
+@content-color: #EAEAEA;
+@section-color: #EF798A;
+@header-footer-color: #EE2677;
+@button-color: #A01A7D;
 
 html, body {
-    height: 100%;
+	font-size: 62.5%;
+	height: 100%;
+	max-width: 80%;
+	margin: auto;
+	border: 1px solid red;
+	background-color: @body-color;
+	box-sizing: border-box;
 }
 
+h1{
+	word-wrap: break-word;
+	text-align: center;
+	margin: 5px;
+	display: block;
+	font-size: 3.2rem;
+	font-weight: bold;
+	border: 1px solid red;
+}
+
+h2{
+	word-wrap: break-word;
+	text-align: center;
+	margin: 5px;
+	display: block;
+	font-size: 2.4rem;
+	font-weight: bold;
+	border: 1px solid red;
+	background-color: @section-color;
+}
+
+h3{
+	word-wrap: break-word;
+	margin: 5px;
+	display: block;
+	font-size: 1.9rem;
+	font-weight: bold;
+	border: 1px solid red;
+}
+
+h4{
+	word-wrap: break-word;
+	margin: 5px;
+	display: block;
+	font-size: 1.7rem;
+	font-weight: bold;
+	border: 1px solid red;
+}
+
+p{
+	word-wrap: break-word;
+	margin: 5px;
+	font-size: 1.5rem;
+}
+
+ul{
+	word-wrap: break-word;
+	margin: 5px;
+	font-size: 1.5rem;
+}
+
+ol{
+	word-wrap: break-word;
+	margin: 5px;
+	font-size: 1.5rem;
+}
+
+.section-one{
+	margin: 5px;
+	border: 1px solid red;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	background-color: @button-color;
+}
+
+.section-two{
+	margin: 5px;
+	border: 1px solid red;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	background-color: @button-color;
+}
+
+.contact{
+	width: 50%;
+	margin: auto;
+}
+.item{
+	width: 45%;
+	background-color: @content-color;
+}
+
+.intro{
+	margin: 5px;
+	border: 5px solid @section-color;
+}
+
+.skills{
+	margin: 5px;
+	border: 5px solid @section-color;
+}
+
+.experience{
+	margin: 5px;
+	border: 5px solid @section-color;
+}
+
+.education{
+	margin: 5px;
+	border: 5px solid @section-color;
+}
+.nav-header{
+	margin: 5px;
+	border: 1px solid red;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	background-color: @header-footer-color;
+}
+
+.nav-footer{
+	margin: 5px;
+	border: 1px solid red;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	background-color: @header-footer-color;
+}
+
+button {
+	background-color: @button-color;
+	border: none;
+	color: white;
+	padding: 1.6rem 3.2rem;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 1.6rem;
+	margin: .4rem .2rem;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: white;
+	color: @button-color;
+}
