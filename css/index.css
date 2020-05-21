@@ -133,15 +133,17 @@ table {
 }
 html,
 body {
+  box-sizing: border-box;
   font-size: 62.5%;
   height: 100%;
   max-width: 80%;
   margin: auto;
   border: 1px solid red;
   background-color: #040F0F;
-  box-sizing: border-box;
+  overflow: auto;
 }
 h1 {
+  box-sizing: border-box;
   word-wrap: break-word;
   text-align: center;
   margin: 5px;
@@ -151,6 +153,7 @@ h1 {
   border: 1px solid red;
 }
 h2 {
+  box-sizing: border-box;
   word-wrap: break-word;
   text-align: center;
   margin: 5px;
@@ -161,6 +164,7 @@ h2 {
   background-color: #EF798A;
 }
 h3 {
+  box-sizing: border-box;
   word-wrap: break-word;
   margin: 5px;
   display: block;
@@ -169,6 +173,7 @@ h3 {
   border: 1px solid red;
 }
 h4 {
+  box-sizing: border-box;
   word-wrap: break-word;
   margin: 5px;
   display: block;
@@ -177,21 +182,21 @@ h4 {
   border: 1px solid red;
 }
 p {
+  box-sizing: border-box;
   word-wrap: break-word;
   margin: 5px;
   font-size: 1.5rem;
 }
 ul {
+  padding: 5%;
+  box-sizing: border-box;
   word-wrap: break-word;
   margin: 5px;
   font-size: 1.5rem;
-}
-ol {
-  word-wrap: break-word;
-  margin: 5px;
-  font-size: 1.5rem;
+  list-style-type: square;
 }
 .section-one {
+  box-sizing: border-box;
   margin: 5px;
   border: 1px solid red;
   display: flex;
@@ -200,6 +205,7 @@ ol {
   background-color: #A01A7D;
 }
 .section-two {
+  box-sizing: border-box;
   margin: 5px;
   border: 1px solid red;
   display: flex;
@@ -208,30 +214,45 @@ ol {
   background-color: #A01A7D;
 }
 .contact {
+  box-sizing: border-box;
   width: 50%;
   margin: auto;
 }
 .item {
+  box-sizing: border-box;
   width: 45%;
   background-color: #EAEAEA;
 }
 .intro {
+  box-sizing: border-box;
   margin: 5px;
   border: 5px solid #EF798A;
 }
+img {
+  display: block;
+  margin: auto;
+  box-sizing: border-box;
+  height: auto;
+  max-width: 75%;
+  width: 75%;
+}
 .skills {
+  box-sizing: border-box;
   margin: 5px;
   border: 5px solid #EF798A;
 }
 .experience {
+  box-sizing: border-box;
   margin: 5px;
   border: 5px solid #EF798A;
 }
 .education {
+  box-sizing: border-box;
   margin: 5px;
   border: 5px solid #EF798A;
 }
 .nav-header {
+  box-sizing: border-box;
   margin: 5px;
   border: 1px solid red;
   display: flex;
@@ -240,6 +261,7 @@ ol {
   background-color: #EE2677;
 }
 .nav-footer {
+  box-sizing: border-box;
   margin: 5px;
   border: 1px solid red;
   display: flex;
@@ -248,6 +270,7 @@ ol {
   background-color: #EE2677;
 }
 button {
+  box-sizing: border-box;
   background-color: #A01A7D;
   border: none;
   color: white;
@@ -261,6 +284,7 @@ button {
   cursor: pointer;
 }
 button:hover {
+  box-sizing: border-box;
   background-color: white;
   color: #A01A7D;
 }
