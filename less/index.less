@@ -70,167 +70,125 @@ html, body {
 	background-color: @body-color;
 	overflow: auto;
 
-}
+	section{
+		box-sizing: border-box;
+		margin: 5px;
+		border: 1px solid red;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		background-color: @button-color;
+		.item{
+			width: 45%;
+			background-color: @content-color;
+			margin: 5px;
+			border: 5px solid @section-color;
+			
+			h1{
+				box-sizing: border-box;
+				word-wrap: break-word;
+				text-align: center;
+				margin: 5px;
+				display: block;
+				font-size: 3.2rem;
+				font-weight: bold;
+				border: 1px solid red;
+			}
+			
+			h2{
+				box-sizing: border-box;
+				word-wrap: break-word;
+				text-align: center;
+				margin: 5px;
+				display: block;
+				font-size: 2.4rem;
+				font-weight: bold;
+				border: 1px solid red;
+				background-color: @section-color;
+			}
+			h3{
+				text-transform: uppercase;
+				box-sizing: border-box;
+				word-wrap: break-word;
+				margin: 5px;
+				display: block;
+				font-size: 1.9rem;
+				font-weight: bold;
+				border: 1px solid red;
+			}
+			
+			h4{
+				box-sizing: border-box;
+				word-wrap: break-word;
+				margin: 0 0 0 5%;
+				display: block;
+				font-size: 1.7rem;
+				font-weight: bold;
+				border: 1px solid red;
+			}
+			ul{
+				height: 100%;
+				padding: 5%;
+				background-color: rgba(238, 38, 119, .3);
+				box-sizing: border-box;
+				word-wrap: break-word;
+				margin: 5px;
+				font-size: 1.5rem;
+				list-style-type: square;
+			}
+			p{
+				box-sizing: border-box;
+				word-wrap: break-word;
+				margin: 5px;
+				font-size: 1.5rem;
+			}
+			.dates{
+				margin: 0 0 0 5%;
+				font-style: italic;
+			}
+			img{
+				display: block;
+				margin: auto;
+				height: auto;
+				max-width: 75%;
+				width: 75%;
+			}
+		}
+		.skills{
+			overflow: hidden;
+		}
+		.contact{
+			width: 91%;
+			margin: auto;
+		}
+	}
+	
+	nav{
+		box-sizing: border-box;
+		margin: 5px;
+		border: 1px solid red;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		background-color: @header-footer-color;
+	
+		button {
+			background-color: @button-color;
+			border: none;
+			color: white;
+			padding: 1.6rem 3.2rem;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 1.6rem;
+			margin: .4rem .2rem;
+			transition-duration: 0.4s;
+			cursor: pointer;
+			&:hover {
+				background-color: white;
+				color: @button-color;
+			}
+		}
+	}
 
-h1{
-	box-sizing: border-box;
-	word-wrap: break-word;
-	text-align: center;
-	margin: 5px;
-	display: block;
-	font-size: 3.2rem;
-	font-weight: bold;
-	border: 1px solid red;
-}
-
-h2{
-	box-sizing: border-box;
-	word-wrap: break-word;
-	text-align: center;
-	margin: 5px;
-	display: block;
-	font-size: 2.4rem;
-	font-weight: bold;
-	border: 1px solid red;
-	background-color: @section-color;
-}
-
-h3{
-	box-sizing: border-box;
-	word-wrap: break-word;
-	margin: 5px;
-	display: block;
-	font-size: 1.9rem;
-	font-weight: bold;
-	border: 1px solid red;
-}
-
-h4{
-	box-sizing: border-box;
-	word-wrap: break-word;
-	margin: 5px;
-	display: block;
-	font-size: 1.7rem;
-	font-weight: bold;
-	border: 1px solid red;
-}
-
-p{
-	box-sizing: border-box;
-	word-wrap: break-word;
-	margin: 5px;
-	font-size: 1.5rem;
-}
-
-ul{
-	padding: 5%;
-	box-sizing: border-box;
-	word-wrap: break-word;
-	margin: 5px;
-	font-size: 1.5rem;
-	list-style-type: square;
-}
-
-.section-one{
-	box-sizing: border-box;
-	margin: 5px;
-	border: 1px solid red;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	background-color: @button-color;
-}
-
-.section-two{
-	box-sizing: border-box;
-	margin: 5px;
-	border: 1px solid red;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	background-color: @button-color;
-}
-
-.contact{
-	box-sizing: border-box;
-	width: 50%;
-	margin: auto;
-}
-.item{
-	box-sizing: border-box;
-	width: 45%;
-	background-color: @content-color;
-}
-
-.intro{
-	box-sizing: border-box;
-	margin: 5px;
-	border: 5px solid @section-color;
-}
-
- img{
-	display: block;
-	margin: auto;
-	box-sizing: border-box;
-	height: auto;
-	max-width: 75%;
-	width: 75%;
-}
-
-.skills{
-	box-sizing: border-box;
-	margin: 5px;
-	border: 5px solid @section-color;
-}
-
-.experience{
-	box-sizing: border-box;
-	margin: 5px;
-	border: 5px solid @section-color;
-}
-
-.education{
-	box-sizing: border-box;
-	margin: 5px;
-	border: 5px solid @section-color;
-}
-.nav-header{
-	box-sizing: border-box;
-	margin: 5px;
-	border: 1px solid red;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	background-color: @header-footer-color;
-}
-
-.nav-footer{
-	box-sizing: border-box;
-	margin: 5px;
-	border: 1px solid red;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	background-color: @header-footer-color;
-}
-
-button {
-	box-sizing: border-box;
-	background-color: @button-color;
-	border: none;
-	color: white;
-	padding: 1.6rem 3.2rem;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 1.6rem;
-	margin: .4rem .2rem;
-	transition-duration: 0.4s;
-	cursor: pointer;
-}
-
-button:hover {
-	box-sizing: border-box;
-	background-color: white;
-	color: @button-color;
 }

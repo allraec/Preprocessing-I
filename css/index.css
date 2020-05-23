@@ -142,7 +142,25 @@ body {
   background-color: #040F0F;
   overflow: auto;
 }
-h1 {
+html section,
+body section {
+  box-sizing: border-box;
+  margin: 5px;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #A01A7D;
+}
+html section .item,
+body section .item {
+  width: 45%;
+  background-color: #EAEAEA;
+  margin: 5px;
+  border: 5px solid #EF798A;
+}
+html section .item h1,
+body section .item h1 {
   box-sizing: border-box;
   word-wrap: break-word;
   text-align: center;
@@ -152,7 +170,8 @@ h1 {
   font-weight: bold;
   border: 1px solid red;
 }
-h2 {
+html section .item h2,
+body section .item h2 {
   box-sizing: border-box;
   word-wrap: break-word;
   text-align: center;
@@ -163,7 +182,9 @@ h2 {
   border: 1px solid red;
   background-color: #EF798A;
 }
-h3 {
+html section .item h3,
+body section .item h3 {
+  text-transform: uppercase;
   box-sizing: border-box;
   word-wrap: break-word;
   margin: 5px;
@@ -172,86 +193,58 @@ h3 {
   font-weight: bold;
   border: 1px solid red;
 }
-h4 {
+html section .item h4,
+body section .item h4 {
   box-sizing: border-box;
   word-wrap: break-word;
-  margin: 5px;
+  margin: 0 0 0 5%;
   display: block;
   font-size: 1.7rem;
   font-weight: bold;
   border: 1px solid red;
 }
-p {
-  box-sizing: border-box;
-  word-wrap: break-word;
-  margin: 5px;
-  font-size: 1.5rem;
-}
-ul {
+html section .item ul,
+body section .item ul {
+  height: 100%;
   padding: 5%;
+  background-color: rgba(238, 38, 119, 0.3);
   box-sizing: border-box;
   word-wrap: break-word;
   margin: 5px;
   font-size: 1.5rem;
   list-style-type: square;
 }
-.section-one {
+html section .item p,
+body section .item p {
   box-sizing: border-box;
+  word-wrap: break-word;
   margin: 5px;
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  background-color: #A01A7D;
+  font-size: 1.5rem;
 }
-.section-two {
-  box-sizing: border-box;
-  margin: 5px;
-  border: 1px solid red;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: #A01A7D;
+html section .item .dates,
+body section .item .dates {
+  margin: 0 0 0 5%;
+  font-style: italic;
 }
-.contact {
-  box-sizing: border-box;
-  width: 50%;
-  margin: auto;
-}
-.item {
-  box-sizing: border-box;
-  width: 45%;
-  background-color: #EAEAEA;
-}
-.intro {
-  box-sizing: border-box;
-  margin: 5px;
-  border: 5px solid #EF798A;
-}
-img {
+html section .item img,
+body section .item img {
   display: block;
   margin: auto;
-  box-sizing: border-box;
   height: auto;
   max-width: 75%;
   width: 75%;
 }
-.skills {
-  box-sizing: border-box;
-  margin: 5px;
-  border: 5px solid #EF798A;
+html section .skills,
+body section .skills {
+  overflow: hidden;
 }
-.experience {
-  box-sizing: border-box;
-  margin: 5px;
-  border: 5px solid #EF798A;
+html section .contact,
+body section .contact {
+  width: 91%;
+  margin: auto;
 }
-.education {
-  box-sizing: border-box;
-  margin: 5px;
-  border: 5px solid #EF798A;
-}
-.nav-header {
+html nav,
+body nav {
   box-sizing: border-box;
   margin: 5px;
   border: 1px solid red;
@@ -260,17 +253,8 @@ img {
   justify-content: center;
   background-color: #EE2677;
 }
-.nav-footer {
-  box-sizing: border-box;
-  margin: 5px;
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  background-color: #EE2677;
-}
-button {
-  box-sizing: border-box;
+html nav button,
+body nav button {
   background-color: #A01A7D;
   border: none;
   color: white;
@@ -283,8 +267,8 @@ button {
   transition-duration: 0.4s;
   cursor: pointer;
 }
-button:hover {
-  box-sizing: border-box;
+html nav button:hover,
+body nav button:hover {
   background-color: white;
   color: #A01A7D;
 }
