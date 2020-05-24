@@ -49,16 +49,63 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
-* {
-	box-sizing: border-box;
-	border: 1px solid red;
-}
-
 @body-color: #040F0F;
 @content-color: #EAEAEA;
 @section-color: #EF798A;
 @header-footer-color: #EE2677;
 @button-color: #A01A7D;
+@border-line: 5px solid white;
+.flex-box{
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+.header-style{
+	font-weight: bold;
+	margin: 5px;
+	display: block;
+}
+.header-box{
+	text-align: center;
+	.header-style();
+}
+
+.navbar{
+	background-color: @header-footer-color;
+	.flex-box();
+	justify-content: center;
+	padding-top: 10%;
+	button {
+		background-color: @button-color;
+		border: none;
+		color: white;
+		padding: 1.6rem 3.2rem;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 1.6rem;
+		margin: .4rem .2rem;
+		transition-duration: 0.4s;
+		cursor: pointer;
+		&:hover {
+			background-color: white;
+			color: @button-color;
+		}
+		@media screen and (max-width: 500px){
+			padding: 5%;
+		}
+
+	}
+	
+	@media screen and (max-width: 500px){
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 1%;
+	}
+
+}
+
 
 html, body {
 	box-sizing: border-box;
@@ -66,79 +113,57 @@ html, body {
 	height: 100%;
 	max-width: 80%;
 	margin: auto;
-	border: 1px solid red;
 	background-color: @body-color;
-	overflow: auto;
+	word-wrap: break-word;
+	font-family: 'Corben';
 
+	header{
+		border-bottom: @border-line;
+		nav{
+			.navbar();
+		}
+	}
 	section{
-		box-sizing: border-box;
-		margin: 5px;
-		border: 1px solid red;
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
+		padding-top: 5%;
 		background-color: @button-color;
+		.flex-box();
 		.item{
 			width: 45%;
 			background-color: @content-color;
-			margin: 5px;
 			border: 5px solid @section-color;
-			
 			h1{
-				box-sizing: border-box;
-				word-wrap: break-word;
-				text-align: center;
-				margin: 5px;
-				display: block;
+				.header-box();
 				font-size: 3.2rem;
-				font-weight: bold;
-				border: 1px solid red;
 			}
 			
 			h2{
-				box-sizing: border-box;
-				word-wrap: break-word;
-				text-align: center;
-				margin: 5px;
-				display: block;
+				.header-box();
 				font-size: 2.4rem;
-				font-weight: bold;
-				border: 1px solid red;
 				background-color: @section-color;
 			}
 			h3{
+				.header-style();
 				text-transform: uppercase;
-				box-sizing: border-box;
-				word-wrap: break-word;
-				margin: 5px;
-				display: block;
 				font-size: 1.9rem;
-				font-weight: bold;
-				border: 1px solid red;
 			}
 			
 			h4{
-				box-sizing: border-box;
-				word-wrap: break-word;
+				.header-style();
 				margin: 0 0 0 5%;
-				display: block;
 				font-size: 1.7rem;
-				font-weight: bold;
-				border: 1px solid red;
 			}
 			ul{
-				height: 100%;
-				padding: 5%;
+				height: 92.5%;
 				background-color: rgba(238, 38, 119, .3);
-				box-sizing: border-box;
-				word-wrap: break-word;
 				margin: 5px;
-				font-size: 1.5rem;
+				font-size: 1.6rem;
 				list-style-type: square;
+				list-style-position: inside;
+				li{
+					list-style-position: inside;
+				}
 			}
 			p{
-				box-sizing: border-box;
-				word-wrap: break-word;
 				margin: 5px;
 				font-size: 1.5rem;
 			}
@@ -153,42 +178,62 @@ html, body {
 				max-width: 75%;
 				width: 75%;
 			}
+
+			@media screen and (max-width: 500px){
+				width: 97%;
+			}
+
 		}
 		.skills{
+			height: auto;
 			overflow: hidden;
+			ul{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+			}
 		}
 		.contact{
-			width: 91%;
+			width: 93.5%;
 			margin: auto;
-		}
-	}
-	
-	nav{
-		box-sizing: border-box;
-		margin: 5px;
-		border: 1px solid red;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		background-color: @header-footer-color;
-	
-		button {
-			background-color: @button-color;
-			border: none;
-			color: white;
-			padding: 1.6rem 3.2rem;
-			text-align: center;
-			text-decoration: none;
-			display: inline-block;
-			font-size: 1.6rem;
-			margin: .4rem .2rem;
-			transition-duration: 0.4s;
-			cursor: pointer;
-			&:hover {
-				background-color: white;
-				color: @button-color;
+			margin-bottom: 5%;
+			ul{
+				width: 50%;
+				margin-left: auto;
+				margin-right: auto;
+
+				a{
+					&:link {
+						color: black;
+					}
+					&:visited {
+						color: black;
+					}
+				}
+
+				@media screen and (max-width: 500px){
+					width: 97%;
+				}
 			}
+
+			@media screen and (max-width: 500px){
+				width: 97%;
+			}
+		}
+		@media screen and (max-width: 500px){
+			flex-direction: column;
 		}
 	}
 
+	footer{
+		border-top: @border-line;
+		nav{
+			.navbar();
+		}
+	}
+
+	@media screen and (max-width: 500px){
+		margin: auto;
+		width: 100%;
+	}
 }

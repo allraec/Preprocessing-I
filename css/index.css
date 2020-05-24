@@ -127,9 +127,59 @@ table {
   border-spacing: 0;
 }
 /* Set every element's box-sizing to border-box */
-* {
-  box-sizing: border-box;
-  border: 1px solid red;
+.flex-box {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.header-style {
+  font-weight: bold;
+  margin: 5px;
+  display: block;
+}
+.header-box {
+  text-align: center;
+  font-weight: bold;
+  margin: 5px;
+  display: block;
+}
+.navbar {
+  background-color: #EE2677;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 10%;
+}
+.navbar button {
+  background-color: #A01A7D;
+  border: none;
+  color: white;
+  padding: 1.6rem 3.2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.6rem;
+  margin: 0.4rem 0.2rem;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.navbar button:hover {
+  background-color: white;
+  color: #A01A7D;
+}
+@media screen and (max-width: 500px) {
+  .navbar button {
+    padding: 5%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .navbar {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1%;
+  }
 }
 html,
 body {
@@ -138,86 +188,119 @@ body {
   height: 100%;
   max-width: 80%;
   margin: auto;
-  border: 1px solid red;
   background-color: #040F0F;
-  overflow: auto;
+  word-wrap: break-word;
+  font-family: 'Corben';
+}
+html header,
+body header {
+  border-bottom: 5px solid white;
+}
+html header nav,
+body header nav {
+  background-color: #EE2677;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 10%;
+}
+html header nav button,
+body header nav button {
+  background-color: #A01A7D;
+  border: none;
+  color: white;
+  padding: 1.6rem 3.2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.6rem;
+  margin: 0.4rem 0.2rem;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+html header nav button:hover,
+body header nav button:hover {
+  background-color: white;
+  color: #A01A7D;
+}
+@media screen and (max-width: 500px) {
+  html header nav button,
+  body header nav button {
+    padding: 5%;
+  }
+}
+@media screen and (max-width: 500px) {
+  html header nav,
+  body header nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1%;
+  }
 }
 html section,
 body section {
-  box-sizing: border-box;
-  margin: 5px;
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  padding-top: 5%;
   background-color: #A01A7D;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 html section .item,
 body section .item {
   width: 45%;
   background-color: #EAEAEA;
-  margin: 5px;
   border: 5px solid #EF798A;
 }
 html section .item h1,
 body section .item h1 {
-  box-sizing: border-box;
-  word-wrap: break-word;
   text-align: center;
+  font-weight: bold;
   margin: 5px;
   display: block;
   font-size: 3.2rem;
-  font-weight: bold;
-  border: 1px solid red;
 }
 html section .item h2,
 body section .item h2 {
-  box-sizing: border-box;
-  word-wrap: break-word;
   text-align: center;
+  font-weight: bold;
   margin: 5px;
   display: block;
   font-size: 2.4rem;
-  font-weight: bold;
-  border: 1px solid red;
   background-color: #EF798A;
 }
 html section .item h3,
 body section .item h3 {
-  text-transform: uppercase;
-  box-sizing: border-box;
-  word-wrap: break-word;
+  font-weight: bold;
   margin: 5px;
   display: block;
+  text-transform: uppercase;
   font-size: 1.9rem;
-  font-weight: bold;
-  border: 1px solid red;
 }
 html section .item h4,
 body section .item h4 {
-  box-sizing: border-box;
-  word-wrap: break-word;
-  margin: 0 0 0 5%;
-  display: block;
-  font-size: 1.7rem;
   font-weight: bold;
-  border: 1px solid red;
+  margin: 5px;
+  display: block;
+  margin: 0 0 0 5%;
+  font-size: 1.7rem;
 }
 html section .item ul,
 body section .item ul {
-  height: 100%;
-  padding: 5%;
+  height: 92.5%;
   background-color: rgba(238, 38, 119, 0.3);
-  box-sizing: border-box;
-  word-wrap: break-word;
   margin: 5px;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   list-style-type: square;
+  list-style-position: inside;
+}
+html section .item ul li,
+body section .item ul li {
+  list-style-position: inside;
 }
 html section .item p,
 body section .item p {
-  box-sizing: border-box;
-  word-wrap: break-word;
   margin: 5px;
   font-size: 1.5rem;
 }
@@ -234,27 +317,76 @@ body section .item img {
   max-width: 75%;
   width: 75%;
 }
+@media screen and (max-width: 500px) {
+  html section .item,
+  body section .item {
+    width: 97%;
+  }
+}
 html section .skills,
 body section .skills {
+  height: auto;
   overflow: hidden;
+}
+html section .skills ul,
+body section .skills ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 html section .contact,
 body section .contact {
-  width: 91%;
+  width: 93.5%;
   margin: auto;
+  margin-bottom: 5%;
 }
-html nav,
-body nav {
-  box-sizing: border-box;
-  margin: 5px;
-  border: 1px solid red;
+html section .contact ul,
+body section .contact ul {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+html section .contact ul a:link,
+body section .contact ul a:link {
+  color: black;
+}
+html section .contact ul a:visited,
+body section .contact ul a:visited {
+  color: black;
+}
+@media screen and (max-width: 500px) {
+  html section .contact ul,
+  body section .contact ul {
+    width: 97%;
+  }
+}
+@media screen and (max-width: 500px) {
+  html section .contact,
+  body section .contact {
+    width: 97%;
+  }
+}
+@media screen and (max-width: 500px) {
+  html section,
+  body section {
+    flex-direction: column;
+  }
+}
+html footer,
+body footer {
+  border-top: 5px solid white;
+}
+html footer nav,
+body footer nav {
+  background-color: #EE2677;
   display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #EE2677;
+  padding-top: 10%;
 }
-html nav button,
-body nav button {
+html footer nav button,
+body footer nav button {
   background-color: #A01A7D;
   border: none;
   color: white;
@@ -267,8 +399,30 @@ body nav button {
   transition-duration: 0.4s;
   cursor: pointer;
 }
-html nav button:hover,
-body nav button:hover {
+html footer nav button:hover,
+body footer nav button:hover {
   background-color: white;
   color: #A01A7D;
+}
+@media screen and (max-width: 500px) {
+  html footer nav button,
+  body footer nav button {
+    padding: 5%;
+  }
+}
+@media screen and (max-width: 500px) {
+  html footer nav,
+  body footer nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1%;
+  }
+}
+@media screen and (max-width: 500px) {
+  html,
+  body {
+    margin: auto;
+    width: 100%;
+  }
 }
