@@ -1,1 +1,428 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+.flex-box {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.header-style {
+  font-weight: bold;
+  margin: 5px;
+  display: block;
+}
+.header-box {
+  text-align: center;
+  font-weight: bold;
+  margin: 5px;
+  display: block;
+}
+.navbar {
+  background-color: #EE2677;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 10%;
+}
+.navbar button {
+  background-color: #A01A7D;
+  border: none;
+  color: white;
+  padding: 1.6rem 3.2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.6rem;
+  margin: 0.4rem 0.2rem;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.navbar button:hover {
+  background-color: white;
+  color: #A01A7D;
+}
+@media screen and (max-width: 500px) {
+  .navbar button {
+    padding: 5%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .navbar {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1%;
+  }
+}
+html,
+body {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  height: 100%;
+  max-width: 80%;
+  margin: auto;
+  background-color: #040F0F;
+  word-wrap: break-word;
+  font-family: 'Corben';
+}
+html header,
+body header {
+  border-bottom: 5px solid white;
+}
+html header nav,
+body header nav {
+  background-color: #EE2677;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 10%;
+}
+html header nav button,
+body header nav button {
+  background-color: #A01A7D;
+  border: none;
+  color: white;
+  padding: 1.6rem 3.2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.6rem;
+  margin: 0.4rem 0.2rem;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+html header nav button:hover,
+body header nav button:hover {
+  background-color: white;
+  color: #A01A7D;
+}
+@media screen and (max-width: 500px) {
+  html header nav button,
+  body header nav button {
+    padding: 5%;
+  }
+}
+@media screen and (max-width: 500px) {
+  html header nav,
+  body header nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1%;
+  }
+}
+html section,
+body section {
+  padding-top: 5%;
+  background-color: #A01A7D;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+html section .item,
+body section .item {
+  width: 45%;
+  background-color: #EAEAEA;
+  border: 5px solid #EF798A;
+}
+html section .item h1,
+body section .item h1 {
+  text-align: center;
+  font-weight: bold;
+  margin: 5px;
+  display: block;
+  font-size: 3.2rem;
+}
+html section .item h2,
+body section .item h2 {
+  text-align: center;
+  font-weight: bold;
+  margin: 5px;
+  display: block;
+  font-size: 2.4rem;
+  background-color: #EF798A;
+}
+html section .item h3,
+body section .item h3 {
+  font-weight: bold;
+  margin: 5px;
+  display: block;
+  text-transform: uppercase;
+  font-size: 1.9rem;
+}
+html section .item h4,
+body section .item h4 {
+  font-weight: bold;
+  margin: 5px;
+  display: block;
+  margin: 0 0 0 5%;
+  font-size: 1.7rem;
+}
+html section .item ul,
+body section .item ul {
+  height: 92.5%;
+  background-color: rgba(238, 38, 119, 0.3);
+  margin: 5px;
+  font-size: 1.6rem;
+  list-style-type: square;
+  list-style-position: inside;
+}
+html section .item ul li,
+body section .item ul li {
+  list-style-position: inside;
+}
+html section .item p,
+body section .item p {
+  margin: 5px;
+  font-size: 1.5rem;
+}
+html section .item .dates,
+body section .item .dates {
+  margin: 0 0 0 5%;
+  font-style: italic;
+}
+html section .item img,
+body section .item img {
+  display: block;
+  margin: auto;
+  height: auto;
+  max-width: 75%;
+  width: 75%;
+}
+@media screen and (max-width: 500px) {
+  html section .item,
+  body section .item {
+    width: 97%;
+  }
+}
+html section .skills,
+body section .skills {
+  height: auto;
+  overflow: hidden;
+}
+html section .skills ul,
+body section .skills ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+html section .contact,
+body section .contact {
+  width: 93.5%;
+  margin: auto;
+  margin-bottom: 5%;
+}
+html section .contact ul,
+body section .contact ul {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+html section .contact ul a:link,
+body section .contact ul a:link {
+  color: black;
+}
+html section .contact ul a:visited,
+body section .contact ul a:visited {
+  color: black;
+}
+@media screen and (max-width: 500px) {
+  html section .contact ul,
+  body section .contact ul {
+    width: 97%;
+  }
+}
+@media screen and (max-width: 500px) {
+  html section .contact,
+  body section .contact {
+    width: 97%;
+  }
+}
+@media screen and (max-width: 500px) {
+  html section,
+  body section {
+    flex-direction: column;
+  }
+}
+html footer,
+body footer {
+  border-top: 5px solid white;
+}
+html footer nav,
+body footer nav {
+  background-color: #EE2677;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 10%;
+}
+html footer nav button,
+body footer nav button {
+  background-color: #A01A7D;
+  border: none;
+  color: white;
+  padding: 1.6rem 3.2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.6rem;
+  margin: 0.4rem 0.2rem;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+html footer nav button:hover,
+body footer nav button:hover {
+  background-color: white;
+  color: #A01A7D;
+}
+@media screen and (max-width: 500px) {
+  html footer nav button,
+  body footer nav button {
+    padding: 5%;
+  }
+}
+@media screen and (max-width: 500px) {
+  html footer nav,
+  body footer nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1%;
+  }
+}
+@media screen and (max-width: 500px) {
+  html,
+  body {
+    margin: auto;
+    width: 100%;
+  }
+}
